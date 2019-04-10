@@ -1,4 +1,4 @@
-export interface Specie{
+export interface Specie {
     name: string;
     average_lifespan: string;
     homeworld: string; // url planet
