@@ -1,3 +1,20 @@
-<p>
-  planet works!
-</p>
+<div class="container">
+  <h1>Rechercher une planète (même si elle est perdue) !</h1>
+  <form id="searchPlanet" class="form-group" (submit)="searchPlanet(searchP)" #fp="ngForm">
+    <div class="form-group">
+      <label>Entrez le nom de la planète que vous cherchez : </label>
+      <input class="form-control" type="text" [(ngModel)]="searchP" name="searchP" required>
+      <br>
+      <button class="btn btn-primary" type="submit" [disabled]="fp.invalid">Es-tu sûr de vouloir la chercher ?</button>
+    </div>
+  </form>
+
+  <div *ngIf="research">
+    <div *ngFor="let planet of research.results">
+      <h2>{{planet.name}}</h2>
+      <p>Diamètre : {{planet.diameter}}</p>
+      <p>Climat : {{planet.climate}}</p>
+      <p>Population : {{planet.population}}</p>
+    </div>
+  </div>
+</div>
