@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CharacterService } from '../character.service';
+import { SearchCharacter } from '../model/searchCharacter.model';
 
 @Component({
   selector: 'app-character',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterComponent implements OnInit {
 
-  constructor() { }
+  research: SearchCharacter;
+  search: string;
+
+  constructor(public cs: CharacterService) { }
 
   ngOnInit() {
+  }
+
+  searchCharac(search: string): void {
+    this.cs.searchCharac(search).subscribe( res => {
+      this.research = res;
+      console.log(this.research);
+    }, error => {
+      console.log(error);
+    });
   }
 
 }
