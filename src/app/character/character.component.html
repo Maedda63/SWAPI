@@ -3,7 +3,7 @@
   <form id="searchCharac" class="form-group" (submit)="searchCharac()" #f="ngForm">
     <div class="form-group">
       <label>Entrez un nom de personnage de l'univers Star Wars : </label>
-      <input class="form-control" type="text" [(ngModel)]="search" name="search" required>
+      <input class="form-control" type="text" [(ngModel)]="search" name="search" required #searchCtrl="ngModel">
       <button class="btn btn-primary" type="submit" [disabled]="f.invalid">La Recherche tu lanceras !</button>
     </div>
   </form>
