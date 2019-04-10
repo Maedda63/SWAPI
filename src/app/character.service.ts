@@ -14,7 +14,9 @@ export class CharacterService {
 
   searchCharac(search: string): Observable<SearchCharacter> {
     return this.http.get<SearchCharacter>(
-      this.SWAPI_URL +
-      '?search=' + search);
+      '?search=' +
+      search +
+      '&format=json'
+    );
   }
 }
