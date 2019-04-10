@@ -1,4 +1,5 @@
-<div class="container">
+<button (click)="changeLanguage($event)">En Wookie !</button>
+<div *ngIf="!wookieSearch" class="container">
   <h1>Rechercher un personnage !</h1>
   <form id="searchCharac" class="form-group" (submit)="searchCharac(search)" #f="ngForm">
     <div class="form-group">
@@ -15,6 +16,26 @@
       <p>Genre : {{charac.gender}}</p>
       <p>Taille : {{charac.height}} cm</p>
       <p>Poids : {{charac.mass}} kg</p>
+    </div>
+  </div>
+</div>
+<div *ngIf="wookieSearch" class="container">
+  <h1>WOHRAOARAH ! (Rechercher un personnage !)</h1>
+  <form id="searchWookieCharac" class="form-group" (submit)="searchWookieCharac(search)" #fw="ngForm">
+    <div class="form-group">
+      <label>Entrez un nom de personnage de l'univers Star Wars : </label>
+      <input class="form-control" type="text" [(ngModel)]="search" name="search" required>
+      <br>
+      <button class="btn btn-primary" type="submit" [disabled]="fw.invalid">WROAOAH !</button>
+    </div>
+  </form>
+
+  <div *ngIf="wresearch">
+    <div *ngFor="let wookie of wresearch.rcwochuanaoc">
+      <h2>{{wookie.whrascwo}}</h2>
+      <p>Genre : {{wookie.rrwowhwaworc}}</p>
+      <p>Taille : {{wookie.acwoahrracao}} cm</p>
+      <p>Poids : {{wookie.scracc}} kg</p>
     </div>
   </div>
 </div>
