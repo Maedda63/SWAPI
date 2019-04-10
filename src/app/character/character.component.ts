@@ -20,6 +20,7 @@ export class CharacterComponent implements OnInit {
   searchCharac(search: string): void {
     this.cs.searchCharac(search).subscribe( res => {
       this.research = res;
+      console.log(search);
       console.log(this.research);
     }, error => {
       console.log(error);

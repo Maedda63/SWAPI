@@ -16,7 +16,8 @@ export class CharacterService {
     return this.http.get<SearchCharacter>(
       this.SWAPI_URL +
       '?search=' +
-      search
+      search +
+      '&format=json'
     );
   }
 }
