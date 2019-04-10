@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Rechercher un personnage !</h1>
-  <form id="searchCharac" class="form-group" (submit)="searchCharac()" #f="ngForm">
+  <form id="searchCharac" class="form-group" (submit)="searchCharac(search)" #f="ngForm">
     <div class="form-group">
       <label>Entrez un nom de personnage de l'univers Star Wars : </label>
       <input class="form-control" type="text" [(ngModel)]="search" name="search" required>

@@ -14,10 +14,7 @@ export class CharacterComponent implements OnInit {
 
   constructor(public cs: CharacterService) { }
 
-  ngOnInit() {
-  }
-
-  searchCharac(search: string): void {
+searchCharac(search: string): void {
     this.cs.searchCharac(search).subscribe( res => {
       this.research = res;
       console.log(this.research);
@@ -26,4 +23,6 @@ export class CharacterComponent implements OnInit {
     });
   }
 
+  ngOnInit() {
+  }
 }
