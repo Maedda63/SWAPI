@@ -13,11 +13,11 @@ export class PlanetService {
 
   constructor(public http: HttpClient) { }
 
-  searchPlanet(searchP: string): Observable<SearchPlanet> {
+  searchPlanet(search: string): Observable<SearchPlanet> {
     return this.http.get<SearchPlanet>(
       this.SWAPI_URL +
       '?search=' +
-      searchP +
+      search +
       '&format=json'
     );
   }

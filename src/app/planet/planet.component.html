@@ -1,9 +1,9 @@
 <div class="container">
   <h1>Rechercher une planète (même si elle est perdue) !</h1>
-  <form id="searchPlanet" class="form-group" (submit)="searchPlanet(searchP)" #fp="ngForm">
+  <form id="searchPlanet" class="form-group" (submit)="searchPlanet(search)" #fp="ngForm">
     <div class="form-group">
       <label>Entrez le nom de la planète que vous cherchez : </label>
-      <input class="form-control" type="text" [(ngModel)]="searchP" name="searchP" required>
+      <input class="form-control" type="text" [(ngModel)]="search" name="searchP" required>
       <br>
       <button class="btn btn-primary" type="submit" [disabled]="fp.invalid">Es-tu sûr de vouloir la chercher ?</button>
     </div>

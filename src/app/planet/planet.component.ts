@@ -10,14 +10,14 @@ import { PlanetService } from '../planet.service';
 export class PlanetComponent implements OnInit {
 
   research: SearchPlanet;
-  searchP: string;
+  search: string;
 
   constructor(public ps: PlanetService) { }
 
-  searchPlanet(searchP: string): void {
-    this.ps.searchPlanet(searchP).subscribe( res => {
+  searchPlanet(search: string): void {
+    this.ps.searchPlanet(search).subscribe( res => {
       this.research = res;
-      console.log(searchP);
+      console.log(search);
       console.log(this.research);
     }, error => {
       console.log(error);
