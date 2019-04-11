@@ -1,6 +1,6 @@
 export interface SearchWookieCharacter {
     oaoohuwhao: string; // count
-    whwokao: string; // next
-    akrcwohoahoohuc: string; // previous
+    whwokao: any; // next
+    akrcwohoahoohuc: any; // previous
     rcwochuanaoc: string; // results
 }
