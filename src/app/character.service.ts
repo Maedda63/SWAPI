@@ -27,7 +27,7 @@ export class CharacterService {
       this.SWAPI_URL +
       '?search=' +
       search +
-      '&format=wookiee'
+      '&format=wookiee&page=2' // sans cette page 2 ça ne fonctionne pas en raison de la valeur de previous et du next non reconnu en wookie
     );
   }
 }
